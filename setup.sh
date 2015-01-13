@@ -9,5 +9,7 @@ cp -r .vim ~/.vim
 cp .vimrc ~/.vimrc
 cp .bash_profile ~/.bash_profile
 
+vim +PluginInstall +qall
+
 echo "Restart shell for changes to take full effect"
 
