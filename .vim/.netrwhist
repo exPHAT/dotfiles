@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/aaron/.vim'
+let g:netrw_dirhist_2='/Users/aaron/Desktop/node-boilerplate'
+let g:netrw_dirhist_3='/Users/aaron/Desktop/node-boilerplate/node_modules'
+let g:netrw_dirhist_4='/Users/aaron/Development/monokai-prismjs/.git'
+let g:netrw_dirhist_5='/Users/aaron/Development/glaze/.git'
+let g:netrw_dirhist_6='/Users/aaron/Development/aMessage/.git'
