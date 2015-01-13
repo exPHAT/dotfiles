@@ -5,7 +5,7 @@ apt-get install git
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Move everything to home folder
-cp -r .vim ~/.vim
+cp -r .vim ~/
 cp .vimrc ~/.vimrc
 cp .bash_profile ~/.bash_profile
 
