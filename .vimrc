@@ -1,29 +1,25 @@
 " Setup plugins
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
 
-" Multiple cursors (Like sublime text)
+" Multiple cursors (Like SublimeText)
 Plugin 'git://github.com/terryma/vim-multiple-cursors.git'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call vundle#end()
+filetype plugin indent on
 
+" Save time from typos and reassign capital letters
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
 
 " Setup color scheme
 syntax enable
@@ -37,6 +33,7 @@ autocmd FileType conf,fstab       let b:comment_leader = '# '
 autocmd FileType tex              let b:comment_leader = '% '
 autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
+
 " Bind keys to comment action
 noremap <silent> ,// :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,.. :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
