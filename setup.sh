@@ -1,6 +1,3 @@
-# Git
-apt-get install git
-
 # Setup Vundle (vim package manager)
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/terryma/vim-multiple-cursors ~/.vim/bundle/vim-multiple-cursors
