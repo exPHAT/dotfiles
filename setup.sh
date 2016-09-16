@@ -7,7 +7,11 @@ git clone https://github.com/tomasr/molokai.git ./molokai
 mv molokai/colors ~/.vim/colors
 rm -rf molokai
 
-# Move everything to home folder
+# Rename old files
+mv ~/.vimrc ~/.vimrc_old
+mv ~/.bash_profile ~/.bash_profile_old
+
+# Move new files into place
 cp .vimrc ~/.vimrc
 cp .bash_profile ~/.bash_profile
 
