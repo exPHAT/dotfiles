@@ -14,3 +14,13 @@ alias FUCK='fuck'
 alias st='open -a Sublime\ Text.app'
 alias ST='st'
 
+alias go='export GOPATH=$PWD && /usr/local/go/bin/go'
+
+# Incase sombody needs to know what editor I use
+export EDITOR=vim
+
+# function for setting terminal titles in OSX
+function title {
+  printf "\033]0;%s\007" "$1"
+}
+
