@@ -7,7 +7,7 @@ alias python=python3
 alias pip=pip3
 
 # Setup thefuck
-alias fuck='eval $(thefuck $(fc -ln -1))'
+eval $(thefuck --alias)
 alias FUCK='fuck'
 
 # Quick command for Sublime Text
