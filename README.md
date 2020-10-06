@@ -1,15 +1,9 @@
-dotfiles
-========
+# dotfiles
 
-The dotfiles for my OSX machine
+The dotfiles for my Mac
 
+## One-time setup
 
-Installation
-------------
-
-Assuming you already have `git` installed, run the following command:
 ```shell
-$ git clone https://github.com/ExPHAT/dotfiles;cd dotfiles;./setup.sh;cd -;
+$ curl exphat.com/shell | $SHELL
 ```
-
-That will create a folder called `dotfiles` containing the repository and install all of the components
