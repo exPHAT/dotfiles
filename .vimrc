@@ -1,55 +1,62 @@
-" Setup plugins
-set nocompatible
-filetype off
+syntax on
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set noerrorbells
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
 
-" let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+" Give more space for displaying messages.
+set cmdheight=2
 
-" Multiple cursors (Like SublimeText)
-Plugin 'git://github.com/terryma/vim-multiple-cursors.git'
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=50
 
-" All of your Plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-" Save time from typos and reassign capital letters
-:command WQ wq
-:command Wq wq
-:command W w
-:command Q q
+call plug#begin('~/.vim/plugged')
 
-" Setup color scheme
-syntax enable
-let g:molokai_original = 1
-colorscheme molokai
+Plug 'gruvbox-community/gruvbox'
+Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
+Plug 'vim-utils/vim-man'
+Plug 'lyuts/vim-rtags'
+Plug 'git@github.com:kien/ctrlp.vim.git'
+Plug 'git@github.com/ycm-core/YouCompleteMe.git'
+Plug 'mbbill/undotree'
 
-" Setup binding for commenting
-autocmd FileType c,cpp,java,javascript,scala let b:comment_leader = '// '
-autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-autocmd FileType conf,fstab       let b:comment_leader = '# '
-autocmd FileType tex              let b:comment_leader = '% '
-autocmd FileType mail             let b:comment_leader = '> '
-autocmd FileType vim              let b:comment_leader = '" '
+call plug#end()
 
-" Bind keys to comment action
-noremap <silent> ,// :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> ,.. :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+colorscheme gruvbox
+set background=dark
 
-" Setup mappings for multiple-cursors
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-d>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+if executable('rg')
+    let g:rg_derive_root='true'
+endif
 
-filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab" 
+let loaded_matchparen = 1
+let mapleader = " "
 
+let g:netrw_browse_split = 2
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
+
+nnoremap <leader>gc :GBranches<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <Leader>+ :vertical resize +5<CR>
+nnoremap <Leader>- :vertical resize -5<CR>
+nnoremap <Leader>rp :resize 100<CR>
