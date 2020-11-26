@@ -48,8 +48,9 @@ Plug 'mg979/vim-visual-multi'
 
 call plug#end()
 
-if !empty(glob('~/.vim/autoload/plug.vim'))
-  colorscheme onedark
+let colorscheme="onedark"
+if findfile("colors/" .colorscheme .".vim", &rtp) != ""
+  execute "colorscheme " . colorscheme
 endif
 set background=dark
 
