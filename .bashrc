@@ -11,14 +11,15 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Random alias's
-alias python=python3.8
-alias pip=pip3.8
+alias python=python3
+alias pip=pip3
 
 # Quick command for Sublime Text
 alias st='open -a Sublime\ Text.app'
 alias ST='st'
 
 # Restart `coreaudio` process
+# I constantly have issues with the audio daemon so this is just an easy way to fix
 alias audio='sudo killall coreaudiod'
 
 # Some services will give you the option to use your preffered editor
@@ -28,7 +29,7 @@ export EDITOR=vim
 # =========== PATH SETUP ===========
 #
 
-# Standard stuff (added by MacPorts)
+# Added by MacPorts
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # Go
