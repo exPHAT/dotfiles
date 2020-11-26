@@ -37,10 +37,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
-" Uncomment if you want full autocomplete (this takes a long time to install)
+" Uncomment if you want full autocomplete (YCM takes a long time to install)
 " Plug 'git@github.com:ycm-core/YouCompleteMe.git'
+" Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
 Plug 'grigio/vim-sublime'
