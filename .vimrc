@@ -24,6 +24,13 @@ set updatetime=50
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+" Check for if plug directory exists and install it if not
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'joshdick/onedark.vim'
@@ -32,7 +39,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
-Plug 'git@github.com:ycm-core/YouCompleteMe.git'
 Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
 Plug 'grigio/vim-sublime'
@@ -41,7 +47,9 @@ Plug 'mg979/vim-visual-multi'
 
 call plug#end()
 
-colorscheme onedark
+if !empty(glob('~/.vim/autoload/plug.vim'))
+  colorscheme onedark
+endif
 set background=dark
 
 if executable('rg')
