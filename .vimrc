@@ -39,7 +39,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
-Plug 'git@github.com:ycm-core/YouCompleteMe.git'
+" Uncomment if you want full autocomplete (this takes a long time to install)
+" Plug 'git@github.com:ycm-core/YouCompleteMe.git'
 Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
 Plug 'grigio/vim-sublime'
@@ -96,8 +97,6 @@ if ($COLORTERM == "truecolor" || $COLORTERM == "24bit")
 endif
 
 
-
-" Testing comment commands
 " Setup binding for commenting
 autocmd FileType c,cpp,java,javascript,scala let b:comment_leader = '// '
 autocmd FileType sh,ruby,python   let b:comment_leader = '# '
