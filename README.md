@@ -1,9 +1,7 @@
 # dotfiles
 
-The dotfiles for my Mac
+My dotfiles!
 
 ## One-time setup
 
-```shell
-$ curl exphat.com/shell | $SHELL
-```
+Coming soon!
