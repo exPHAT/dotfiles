@@ -13,6 +13,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set mouse=a
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -79,6 +80,12 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
+
+" Disable arrow keys to force you to be a pro and use HJKL
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 "Optionally enable 24-bit color if terminal supports it
 if ($COLORTERM == "truecolor" || $COLORTERM == "24bit")
